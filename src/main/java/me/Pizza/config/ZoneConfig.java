@@ -12,6 +12,8 @@ import com.sk89q.worldguard.WorldGuard;
 
 import me.Pizza.FurnitureShop;
 
+import java.io.File;
+
 public class ZoneConfig {
 
 	private final FurnitureShop plugin;
@@ -19,7 +21,19 @@ public class ZoneConfig {
 	public ZoneConfig(FurnitureShop plugin) {
 		this.plugin = plugin;
 
-		plugin.saveDefaultConfig();
+		reload();
+	}
+
+	public void reload() {
+		File config = new File(plugin.getDataFolder(), "config.yml");
+
+		if (!config.exists()) {
+			plugin.saveDefaultConfig();
+		}
+		else {
+			plugin.reloadConfig();
+			plugin.saveConfig();
+		}
 	}
 
 	public void setZoneStatus(CommandSender sender, boolean status) {

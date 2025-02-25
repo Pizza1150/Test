@@ -44,7 +44,7 @@ public class FurnitureShopCommand implements TabExecutor {
 
         switch (args[0].toLowerCase()) {
             case "reload" -> {
-                plugin.reloadConfig();
+                plugin.getZoneConfig().reload();
                 sender.sendMessage("§aFurnitureShop got reloaded!");
                 return true;
             }

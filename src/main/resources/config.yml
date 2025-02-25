@@ -1,36 +1,19 @@
 furniture:
   rotation: true
   yaw: 3
-  particle:
-  sound:
+  # Effect lists : 1, 2
+  effect: 1
+  sound: minecraft:entity.chicken.egg
 
 bossbars:
   color: WHITE
   texts:
-    - "§6Left click to open menu"
-    - "§cShift to exit furniture shop"
+  - §6Left click to open menu
+  - §cShift to exit furniture shop
   
 zone:
   enable: true
   region: ''
-  viewer-location:
-    x:
-    y:
-    z:
-    pitch:
-    yaw:
-    world:
-  furniture-location:
-    x:
-    y:
-    z:
-    pitch:
-    yaw:
-    world:
-  exit-location:
-    x:
-    y:
-    z:
-    pitch:
-    yaw:
-    world:
+  viewer-location: {}
+  furniture-location: {}
+  exit-location: {}
