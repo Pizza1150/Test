@@ -1,0 +1,11 @@
+name: FurnitureShop
+version: '${project.version}'
+main: me.Pizza.FurnitureShop
+author: Pizza
+api-version: '1.21'
+depend: [WorldEdit, WorldGuard, packetevents]
+commands:
+  furnitureshop:
+    usage: "/furnitureshop <editzone|reload>"
+    aliases: [fs]
+    permission: furnitureshop.*
