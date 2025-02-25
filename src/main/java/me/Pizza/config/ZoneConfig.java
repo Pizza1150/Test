@@ -29,8 +29,7 @@ public class ZoneConfig {
 
 		if (!config.exists()) {
 			plugin.saveDefaultConfig();
-		}
-		else {
+		} else {
 			plugin.reloadConfig();
 			plugin.saveConfig();
 		}
